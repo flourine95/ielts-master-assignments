@@ -19,7 +19,7 @@ Máy tính, 1440px:
 
 Điện thoại, 390px:
 
-![Danh sách bài tập trên điện thoại](docs/screenshot-mobile.png)
+<img src="docs/screenshot-mobile.png" alt="Danh sách bài tập trên điện thoại" width="390">
 
 ## Kiểm tra
 
