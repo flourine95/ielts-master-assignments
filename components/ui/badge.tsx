@@ -18,6 +18,15 @@ const badgeVariants = cva(
         ghost:
           "hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50",
         link: "text-primary underline-offset-4 hover:underline",
+
+        statusDone:
+          "bg-status-done-surface text-status-done ring-1 ring-inset ring-status-done/25",
+        statusLate:
+          "bg-status-late-surface text-status-late ring-1 ring-inset ring-status-late/30",
+        statusPending:
+          "bg-status-pending-surface text-status-pending ring-1 ring-inset ring-status-pending/25",
+        statusOverdue:
+          "bg-status-overdue-surface text-status-overdue ring-1 ring-inset ring-status-overdue/30",
       },
     },
     defaultVariants: {
