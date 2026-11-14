@@ -1,15 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import type { Metadata } from "next"
+import { Be_Vietnam_Pro } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: "Bài tập của tôi | IELTS Master",
+    template: "%s | IELTS Master",
+  },
+  description:
+    "Danh sách bài tập của học viên IELTS Master, kèm hạn nộp và trạng thái từng bài.",
+  applicationName: "IELTS Master",
+  robots: { index: false, follow: false },
+}
 
 export default function RootLayout({
   children,
@@ -18,9 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="vi"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={cn("antialiased", "font-sans", beVietnamPro.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
